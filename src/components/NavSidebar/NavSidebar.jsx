@@ -5,7 +5,7 @@ import { useDashStore } from '@/store/dashStore';
 import { v4 as uuidv4 } from 'uuid';
 import Toggler from '@/components/Toggler/Toggler';
 import { VDlogo } from '../icons';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const NavSidebar = () => {
 	const [openMenu, setOpenMenu] = useState(false);
@@ -19,6 +19,10 @@ const NavSidebar = () => {
 		setMode();
 	};
 
+	const handleCloseMenu = () => {
+		setOpenMenu(false);
+
+	}
 	useEffect(() => {
 		if (modeState) {
 			document.documentElement.classList.add('vdPanelLight');
@@ -36,6 +40,17 @@ const NavSidebar = () => {
 	];
 
 	const project = [['pizzeria', '/pizzeria', <VDlogo />]];
+
+	const [lightIcon, setLightIcon] = useState(true)
+	const location = useLocation();
+
+	useEffect(() => {
+		if (location.pathname===project[0][1]) {
+			setLightIcon(false)
+		}else{
+			setLightIcon(true)
+		}
+	}, [location]);
 
 	return (
 		<nav className={`${close}`}>
@@ -78,7 +93,7 @@ const NavSidebar = () => {
 					{project.map((item) => (
 						<li key={uuidv4()}>
 							{' '}
-							<Link to={item[1]} className='pagesLinks' key={uuidv4()}>
+							<Link to={item[1]} className={`${pagesLinks} ${lightIcon&&'currentProject'}`} key={uuidv4()} onClick={handleCloseMenu}>
 								{item[2]}
 								<span className='linkName'>{item[0]}</span>
 							</Link>{' '}

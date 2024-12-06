@@ -129,3 +129,14 @@ a {
 *::-webkit-scrollbar-thumb:active {
 	background-color: #5663a3;
 }
+
+@keyframes pulseColors {
+	12.5%   {fill: var(--gold);}
+	25%   {fill: var(--mainFC);}
+	37.5%  {fill: var(--gold);}
+	50%  {fill: var(--mainFC);}
+	62.5% {fill: var(--gold);}
+	  75% {fill: var(--mainFC);}
+		87.5% {fill: var(--gold);}
+		  100% {fill: var(--mainFC);}
+  }

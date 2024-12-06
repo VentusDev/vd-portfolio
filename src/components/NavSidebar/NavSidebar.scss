@@ -138,41 +138,39 @@ nav.close li a .linkName {
 	min-width: 30px;
 }
 
-
-	nav {
-		width: 73px;
-	}
-	nav.close {
-		width: 250px;
-	}
-	nav .userName {
-		opacity: 0;
-		pointer-events: none;
-	}
-	nav.close .userName {
-		opacity: 1;
-		pointer-events: auto;
-	}
-	nav li a .linkName {
-		opacity: 0;
-		pointer-events: none;
-	}
-	nav.close li a .linkName {
-		opacity: 1;
-		pointer-events: auto;
-	}
-	nav ~ .dashboard {
-		left: 73px;
-		width: calc(100% - 73px);
-	}
-	nav.close ~ .dashboard {
-		left: 250px;
-		width: calc(100% - 250px);
-	}
-	.activity .activity-data {
-		overflow-x: scroll;
-	}
-
+nav {
+	width: 73px;
+}
+nav.close {
+	width: 250px;
+}
+nav .userName {
+	opacity: 0;
+	pointer-events: none;
+}
+nav.close .userName {
+	opacity: 1;
+	pointer-events: auto;
+}
+nav li a .linkName {
+	opacity: 0;
+	pointer-events: none;
+}
+nav.close li a .linkName {
+	opacity: 1;
+	pointer-events: auto;
+}
+nav ~ .dashboard {
+	left: 73px;
+	width: calc(100% - 73px);
+}
+nav.close ~ .dashboard {
+	left: 250px;
+	width: calc(100% - 250px);
+}
+.activity .activity-data {
+	overflow-x: scroll;
+}
 
 @media (max-width: 750px) {
 	nav ~ .dashboard {
@@ -200,4 +198,9 @@ nav.close li a .linkName {
 	.dashboard {
 		padding: 0;
 	}
+}
+
+.currentProject svg {
+	fill: var(--gold);
+	animation: pulseColors 5s infinite;
 }
