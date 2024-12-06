@@ -1,0 +1,30 @@
+.scrollTopArrow {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex: 0 0 auto;
+	margin-right: 1rem;
+	width: 3rem;
+	height: 3rem;
+	padding: 1rem;
+	border-radius: 50%;
+	background-color: var(--gold);
+	color: var(--mainFC);
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    z-index: 1;
+    cursor: pointer;
+    opacity: .3;
+    transition: .3s ease;
+}
+
+.scrollTopArrow:hover{
+    opacity: 1;
+}
+
+.scrollTopArrow::after{
+	content: '⇩';
+    font-size: 40px;
+    transform: rotate(180deg);
+}

@@ -1,0 +1,104 @@
+.skills {
+	align-content: center;
+	color: var(--mainFC);
+
+	h1 {
+		text-align: center;
+	}
+
+	ul {
+		width: min(60rem, 90%);
+		margin-inline: auto;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+		justify-content: center;
+		gap: 2rem;
+		list-style: none;
+		a {
+			margin: auto;
+		}
+	}
+
+	ul li {
+		max-width: 15rem;
+		justify-self: center;
+		display: grid;
+		grid-template:
+			'icon'
+			'line'
+			'dot'
+			'title'
+			'descr' 1fr;
+		justify-items: center;
+		align-items: flex-start;
+		text-align: center;
+		margin: auto;
+	}
+
+	ul li .icon {
+		grid-area: icon;
+		width: 6rem;
+		aspect-ratio: 1;
+		display: grid;
+		place-items: center;
+		color: var(--mainFC);
+		font-size: 2.5rem;
+		border: 0.4rem solid var(--mainFC);
+		border-radius: 50%;
+		background: var(--accentColor);
+		stroke-dashoffset: calc(440 - (440 * 87) / 100);
+		fill: var(--mainFC);
+		box-shadow: -0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.45),
+			inset -0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.45);
+
+		svg {
+			width: 50px;
+			height: auto;
+		}
+	}
+
+	ul li::before {
+		content: '';
+		grid-area: line;
+		height: 2rem;
+		border-right: 2px dotted currentColor;
+	}
+
+	ul li::after {
+		content: '';
+		grid-area: dot;
+		width: 1rem;
+		aspect-ratio: 1;
+		border-radius: 50%;
+		background: var(--accentColor);
+		justify-self: center;
+		margin-bottom: 0.5rem;
+	}
+
+	ul li .title {
+		grid-area: title;
+		margin-block: 0.5rem;
+		font-size: 1.3rem;
+		font-weight: 600;
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	ul li .descr {
+		min-height: 150px;
+	}
+
+	ul li span {
+		margin-bottom: 2rem;
+		font-weight: 700;
+	}
+
+	.credits {
+		position: fixed;
+		bottom: 1rem;
+		right: 1rem;
+	}
+	.credits a {
+		color: var(--color);
+	}
+}

@@ -1,0 +1,12 @@
+.flexBox{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+@media (min-width: 50em) {
+    .flexBox{
+        flex-direction: row;
+    }
+}
+
