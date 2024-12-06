@@ -1,13 +1,12 @@
-import { useEffect } from 'react'
+import { useEffect } from 'react';
 
-import { Route, Routes, useLocation } from 'react-router-dom'
-import PanelLayout from './layouts/PanelLayout'
-import DashboardPage from './pages/DashboardPage/DashboardPage'
-import ScrollTopArrow from './components/ScrollTopArrow/ScrollTopArrow'
-import PizzeriaPage from './pages/PizzeriaPage/PizzeriaPage'
+import { Navigate, Route, Routes, useLocation } from 'react-router-dom';
+import PanelLayout from './layouts/PanelLayout';
+import DashboardPage from './pages/DashboardPage/DashboardPage';
+import ScrollTopArrow from './components/ScrollTopArrow/ScrollTopArrow';
+import PizzeriaPage from './pages/PizzeriaPage/PizzeriaPage';
 
 function App() {
-
 	const location = useLocation();
 
 	useEffect(() => {
@@ -21,29 +20,21 @@ function App() {
 		}
 	}, [location]);
 
-  return (
-    <>
-    <ScrollTopArrow />
-        <Routes>
+	return (
+		<>
+			<ScrollTopArrow />
+			<Routes>
 				<Route element={<PanelLayout />}>
-					<Route
-						path='/'
-						element={
-								<DashboardPage />
-						}
-					/>
+					<Route path='/' element={<DashboardPage />} />
 				</Route>
-        <Route element={<PanelLayout />}>
-					<Route
-						path='/pizzeria'
-						element={
-								<PizzeriaPage />
-						}
-					/>
+				<Route element={<PanelLayout />}>
+					<Route path='/pizzeria' element={<PizzeriaPage />} />
 				</Route>
-    </Routes>
-    </>
-  )
+
+				<Route path='*' element={<Navigate to='/' replace />} />
+			</Routes>
+		</>
+	);
 }
 
-export default App
+export default App;
