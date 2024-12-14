@@ -23,7 +23,6 @@
 		font-size: 1.3rem;
 	}
     p{
-        width: 70ch;
         margin: auto;
     }
     h2{
@@ -48,6 +47,14 @@
 ol li p {
 	text-align: center !important;
 	line-height: 3 !important;
+}
+
+@media (min-width: 900px) {
+    .projectHeader{
+        p{
+            width: 70ch;
+        }
+    }
 }
 
 @media (max-width: 500px) {
