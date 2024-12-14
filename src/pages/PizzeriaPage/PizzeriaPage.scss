@@ -8,69 +8,14 @@ video::-webkit-media-controls-fullscreen-button {
 	display: none;
 }
 
-.screenImg {
-	max-width: 100%;
-}
-
-.projectPizzeriaHeader {
-	margin: auto auto;
-	width: 100%;
-	height: 100%;
-	position: relative;
-	padding: 2rem 0;
-	p,
-	h2 {
-		position: relative;
-		padding: 0 3rem;
-		margin: 2rem;
-	}
-	h6 {
-		text-align: center;
-		font-size: 1.3rem;
-	}
-}
-
-.projectPizzeriaHeader::before {
-	content: ' ';
-	display: block;
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100% !important;
-	opacity: 0.6;
+.pizzeriaHeader::before {
 	background: url('/pizzas_bg.svg') !important;
-	object-fit: cover;
-	opacity: 0.3;
 }
 
-ol li p {
-	text-align: center !important;
-	line-height: 3 !important;
-}
-
-@media (max-width: 500px) {
-	.projectPizzeriaHeader {
-		padding: 1.5rem 0;
-		font-size: 0.7rem;
-		p,
-		h2,
-		bold {
-			position: relative;
-			padding: 0 1rem;
-			margin: 0.5rem;
-		}
-		bold {
-			font-size: 0.9rem;
-			cursor: pointer;
-		}
+.vdPanelLight{
+	.pizzeriaHeader::before {
+		background: url('/pizzas_bg_light.svg') !important;
 	}
 }
-.spanItem {
-	cursor: pointer;
-	color: var(--primaryColor) !important;
-	transition: 0.5s ease;
-}
-.spanItem:hover {
-	color: var(--actionColor) !important;
-}
+
+

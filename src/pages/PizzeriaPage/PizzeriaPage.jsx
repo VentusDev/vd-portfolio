@@ -2,6 +2,7 @@ import React, { useLayoutEffect, useRef } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { Link } from 'react-router-dom';
 import './PizzeriaPage.scss';
+import '../ProjectPages.scss'
 import letsStartVideo from './screenshots/lets_start.mp4';
 import signUpVideo from './screenshots/signup_example.mp4';
 import signUpEmail from './screenshots/email_ver.png';
@@ -155,9 +156,9 @@ const PizzeriaPage = () => {
 		<ol
 			style={{ '--length': projectDetails.length - 1 }}
 			role='list'
-			className='appDesc'
+			className='appDesc '
 		>
-			<div className='projectPizzeriaHeader'>
+			<div className='projectHeader pizzeriaHeader'>
 				<h2>Projekt Pizzeria</h2>
 				{aboutProject.map((item) => {
 					const markup = { __html: item };

@@ -11,6 +11,7 @@ import {
 	ReactJs,
 } from './icons';
 import Skill from '../Skill/Skill';
+import { TailwindCSS, TS } from '../icons';
 
 const Skills = forwardRef((props, ref) => {
 	const aboutSkills = [
@@ -87,6 +88,22 @@ const Skills = forwardRef((props, ref) => {
 			span: 'Dlaczego oceniam na 50%?',
 			desc: 'Proste przygotowywanie grafik na stronę.',
 			lvl: 50,
+		},
+		{
+			name: 'TailwindCSS',
+			color: '#8adedf',
+			icon: <TailwindCSS />,
+			span: 'Dlaczego oceniam na 30%?',
+			desc: 'Dopiero od końcówki 2024 zapoznaję się z frameworkiem.',
+			lvl: 30,
+		},
+		{
+			name: 'TypeScript',
+			color: '#2161c0',
+			icon: <TS />,
+			span: 'Dlaczego oceniam na 30%?',
+			desc: 'Dopiero od końcówki 2024 zapoznaję się z językiem.',
+			lvl: 30,
 		},
 	];
 	return (

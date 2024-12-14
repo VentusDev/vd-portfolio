@@ -1,0 +1,17 @@
+.pokerSzopHeader::before {
+	background: url('/cards_bg.svg');
+}
+
+.vdPanelLight{
+	.pokerSzopHeader::before {
+		background: url('/cards_bg_light.svg')!important;
+	}
+}
+
+
+.appDesc{
+	.pokerStack::after {
+		content: url('/poker_szop.svg');
+		transform: rotate(0deg)!important;
+	}
+}

@@ -39,7 +39,10 @@ const NavSidebar = () => {
 		['foodtruck', 'https://nervous-murdock-17fe79.netlify.app', <VDlogo />],
 	];
 
-	const project = [['pizzeria', '/pizzeria', <VDlogo />]];
+	const project = [
+		['pizzeria', 'pizzeria', <VDlogo />],
+		['poker szop', 'poker-szop', <VDlogo />]
+	];
 
 	const [lightIcon, setLightIcon] = useState(true)
 	const location = useLocation();
@@ -93,7 +96,7 @@ const NavSidebar = () => {
 					{project.map((item) => (
 						<li key={uuidv4()}>
 							{' '}
-							<Link to={item[1]} className={`${pagesLinks} ${lightIcon&&'currentProject'}`} key={uuidv4()} onClick={handleCloseMenu}>
+							<Link to={`/projekty/2024/${item[1]}`} className={`${pagesLinks} ${lightIcon&&'currentProject'}`} key={uuidv4()} onClick={handleCloseMenu}>
 								{item[2]}
 								<span className='linkName'>{item[0]}</span>
 							</Link>{' '}

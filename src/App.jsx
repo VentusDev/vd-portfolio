@@ -5,6 +5,7 @@ import PanelLayout from './layouts/PanelLayout';
 import DashboardPage from './pages/DashboardPage/DashboardPage';
 import ScrollTopArrow from './components/ScrollTopArrow/ScrollTopArrow';
 import PizzeriaPage from './pages/PizzeriaPage/PizzeriaPage';
+import PokerSzopPage from './pages/PokerSzopPage/PokerSzopPage';
 
 function App() {
 	const location = useLocation();
@@ -28,7 +29,10 @@ function App() {
 					<Route path='/' element={<DashboardPage />} />
 				</Route>
 				<Route element={<PanelLayout />}>
-					<Route path='/pizzeria' element={<PizzeriaPage />} />
+					<Route path='projekty/2024/pizzeria' element={<PizzeriaPage />} />
+				</Route>
+				<Route element={<PanelLayout />}>
+					<Route path='projekty/2024/poker-szop' element={<PokerSzopPage />} />
 				</Route>
 
 				<Route path='*' element={<Navigate to='/' replace />} />
