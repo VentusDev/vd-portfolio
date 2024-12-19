@@ -29,7 +29,7 @@ const AppDesc = () => {
 							</li>
 						))}
 					</ol>
-					<Link to='/pizzeria'>dowiedz się więcej</Link>
+					<Link to='/projekty/2024/pizzeria'>dowiedz się więcej</Link>
 				</li>
 			))}
 			

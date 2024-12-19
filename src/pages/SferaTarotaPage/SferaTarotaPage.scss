@@ -1,0 +1,17 @@
+.sferaTarotapHeader::before {
+	background: url('/stars_bg.svg');
+}
+
+.vdPanelLight{
+	.sferaTarotapHeader::before {
+		background: url('/stars_bg_light.svg')!important;
+	}
+}
+
+
+.appDesc{
+	.tarotStack::after {
+		content: url('/sfera-tarota.svg');
+		transform: rotate(0deg)!important;
+	}
+}

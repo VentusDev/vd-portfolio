@@ -3,6 +3,7 @@ import About from '@/components/About/About';
 import AppDesc from '@/components/AppDesc/AppDesc';
 import Skills from '@/components/Skills/Skills';
 import MoreAbout from '@/components/MoreAbout/MoreAbout';
+import PortfolioSection from '../../components/PortfolioSection/PortfolioSection';
 
 
 const DashboardPage = () => {
@@ -14,9 +15,12 @@ const DashboardPage = () => {
 		<>
 			<About />
 			<h6 onClick={handleScrollToMore} style={{textAlign: 'center', color: 'gray', cursor: 'pointer'}}>więcej o mnie</h6>
+			<PortfolioSection />
 			<AppDesc />
 			<Skills ref={elementRef} />
 			<MoreAbout />
+		
+
 		</>
 	);
 };

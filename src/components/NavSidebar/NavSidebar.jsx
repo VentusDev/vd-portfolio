@@ -4,7 +4,7 @@ import BurgerMenu from '@/components/BurgerMenu/BurgerMenu';
 import { useDashStore } from '@/store/dashStore';
 import { v4 as uuidv4 } from 'uuid';
 import Toggler from '@/components/Toggler/Toggler';
-import { VDlogo } from '../icons';
+import { GitHub, Instagram, VDlogo } from '../icons';
 import { Link, useLocation } from 'react-router-dom';
 
 const NavSidebar = () => {
@@ -33,15 +33,15 @@ const NavSidebar = () => {
 		}
 	}, []);
 
-	const pagesLinks = [
-		['komis', 'https://ventus-trade-auta.netlify.app', <VDlogo />],
-		['firma budwolana', 'https://robud.netlify.app', <VDlogo />],
-		['foodtruck', 'https://nervous-murdock-17fe79.netlify.app', <VDlogo />],
+	const contact = [
+		['xfeliksox', 'https://www.instagram.com/xfeliksox/', <Instagram />],
+		['VentusDev', 'https://github.com/VentusDev', <GitHub />],
 	];
 
 	const project = [
 		['pizzeria', 'pizzeria', <VDlogo />],
-		['poker szop', 'poker-szop', <VDlogo />]
+		['poker szop', 'poker-szop', <VDlogo />],
+		['sfera tarota', 'sfera-tarota', <VDlogo />]
 	];
 
 	const [lightIcon, setLightIcon] = useState(true)
@@ -69,10 +69,10 @@ const NavSidebar = () => {
 				<ul className='navLinks'>
 					<li key={uuidv4()}>
 						<a className='pagesLinks'>
-							<span className='linkName'>projekty z 2021</span>
+							<span className='linkName'>kontakt</span>
 						</a>
 					</li>
-					{pagesLinks.map((item) => (
+					{contact.map((item) => (
 						<li key={uuidv4()}>
 							{' '}
 							<a
@@ -96,7 +96,7 @@ const NavSidebar = () => {
 					{project.map((item) => (
 						<li key={uuidv4()}>
 							{' '}
-							<Link to={`/projekty/2024/${item[1]}`} className={`${pagesLinks} ${lightIcon&&'currentProject'}`} key={uuidv4()} onClick={handleCloseMenu}>
+							<Link to={`/projekty/2024/${item[1]}`} className={`${contact} ${lightIcon&&'currentProject'}`} key={uuidv4()} onClick={handleCloseMenu}>
 								{item[2]}
 								<span className='linkName'>{item[0]}</span>
 							</Link>{' '}

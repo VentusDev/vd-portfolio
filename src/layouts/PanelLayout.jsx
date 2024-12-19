@@ -4,22 +4,26 @@ import React from 'react';
 
 import Header from '@/components/Header/Header';
 import NavSidebar from '@/components/NavSidebar/NavSidebar';
+import Footer from '../components/Footer/Footer';
 
 const PanelLayout = () => {
-	const delayComponents = {
-		nav: 1000,
-		footer: 2000,
-	};
 	return (
-		<div id='panelLayout'>
+		<>
+				<div id='panelLayout'>
 			<NavSidebar />
 
 			<section className='dashboard'>
 				<Header />
 
 				<Outlet />
+				<Footer />
 			</section>
+		
 		</div>
+	
+		
+		</>
+
 	);
 };
 

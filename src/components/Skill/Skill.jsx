@@ -11,7 +11,7 @@ const Skill = ({ item }) => {
 			{icon && <div className='icon'>{icon}</div>}
 			{name && <div className='title'>{name}</div>}
 
-			{span && <span>{span}</span>}
+			{lvl && <span>{`Dlaczego oceniam na ${lvl}%?`}</span>}
 			{desc && (
 				<div className='descr'>
 					<p>{desc}</p>
